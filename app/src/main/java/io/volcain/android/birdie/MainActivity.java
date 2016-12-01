@@ -69,9 +69,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(view);
             }
         });
-
-        // Find the View to add songs to the library
-        TextView add_songs = (TextView) findViewById(R.id.add_songs);
     }
 
     /**
