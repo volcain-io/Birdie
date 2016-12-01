@@ -15,18 +15,16 @@
             style="@style/LinearLayoutHorizontalStyle">
 
             <TextView
-                android:id="@+id/artists"
+                android:id="@+id/albums"
                 style="@style/CategoryStyle"
-                android:onClick="startActivity"
-                android:tag="@string/category_artists"
-                android:text="@string/category_artists" />
+                android:tag="@string/category_albums"
+                android:text="@string/category_albums" />
 
             <TextView
-                android:id="@+id/tags"
+                android:id="@+id/artists"
                 style="@style/CategoryStyle"
-                android:onClick="startActivity"
-                android:tag="@string/category_genre"
-                android:text="@string/category_genre" />
+                android:tag="@string/category_artists"
+                android:text="@string/category_artists" />
         </LinearLayout>
 
         <LinearLayout
@@ -35,16 +33,14 @@
             android:layout_below="@id/category_1">
 
             <TextView
-                android:id="@+id/albums"
+                android:id="@+id/genre"
                 style="@style/CategoryStyle"
-                android:onClick="startActivity"
-                android:tag="@string/category_albums"
-                android:text="@string/category_albums" />
+                android:tag="@string/category_genre"
+                android:text="@string/category_genre" />
 
             <TextView
                 android:id="@+id/songs"
                 style="@style/CategoryStyle"
-                android:onClick="startActivity"
                 android:tag="@string/category_songs"
                 android:text="@string/category_songs" />
         </LinearLayout>
@@ -54,8 +50,8 @@
             android:layout_below="@id/category_2">
 
             <TextView
+                android:id="@+id/add_songs"
                 style="@style/CategoryStyle"
-                android:onClick="addSongs"
                 android:text="@string/add_songs" />
 
             <TextView

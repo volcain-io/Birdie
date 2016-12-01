@@ -18,14 +18,12 @@
                 android:id="@+id/artist_1"
                 style="@style/CategoryStyle"
                 android:tag="@string/artist_1"
-                android:onClick="startActivity"
                 android:text="@string/artist_1" />
 
             <TextView
                 android:id="@+id/artist_2"
                 style="@style/CategoryStyle"
                 android:tag="@string/artist_2"
-                android:onClick="startActivity"
                 android:text="@string/artist_2" />
         </LinearLayout>
 
@@ -38,14 +36,12 @@
                 android:id="@+id/artist_3"
                 style="@style/CategoryStyle"
                 android:tag="@string/artist_3"
-                android:onClick="startActivity"
                 android:text="@string/artist_3" />
 
             <TextView
                 android:id="@+id/artist_4"
                 style="@style/CategoryStyle"
                 android:tag="@string/artist_4"
-                android:onClick="startActivity"
                 android:text="@string/artist_4" />
         </LinearLayout>
 

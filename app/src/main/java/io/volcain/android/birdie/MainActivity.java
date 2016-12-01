@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     static final int REQUEST_AUDIO_OPEN = 1;
@@ -12,6 +13,74 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // create click listeners
+        createClickListeners();
+    }
+
+    /**
+     * method creates click listeners for each artists
+     */
+    private void createClickListeners() {
+        // Find the View that shows the albums category
+        TextView artist_2 = (TextView) findViewById(R.id.albums);
+
+        // Set a click listener on that
+        artist_2.setOnClickListener(new View.OnClickListener() {
+            // will be executed when the user clicks on the text view.
+            @Override
+            public void onClick(View view) {
+                startActivity(view);
+            }
+        });
+
+        // Find the View that shows the artist category
+        TextView artist_1 = (TextView) findViewById(R.id.artists);
+
+        // Set a click listener on that
+        artist_1.setOnClickListener(new View.OnClickListener() {
+            // will be executed when the user clicks on the text view.
+            @Override
+            public void onClick(View view) {
+                startActivity(view);
+            }
+        });
+
+        // Find the View that shows the genre category
+        TextView artist_3 = (TextView) findViewById(R.id.genre);
+
+        // Set a click listener on that
+        artist_3.setOnClickListener(new View.OnClickListener() {
+            // will be executed when the user clicks on the text view.
+            @Override
+            public void onClick(View view) {
+                startActivity(view);
+            }
+        });
+
+        // Find the View that shows the songs category
+        TextView artist_4 = (TextView) findViewById(R.id.songs);
+
+        // Set a click listener on that
+        artist_4.setOnClickListener(new View.OnClickListener() {
+            // will be executed when the user clicks on the text view.
+            @Override
+            public void onClick(View view) {
+                startActivity(view);
+            }
+        });
+
+        // Find the View to add songs to the library
+        TextView add_songs = (TextView) findViewById(R.id.add_songs);
+
+        // Set a click listener on that
+        add_songs.setOnClickListener(new View.OnClickListener() {
+            // will be executed when the user clicks on the text view.
+            @Override
+            public void onClick(View view) {
+                addSongs(view);
+            }
+        });
     }
 
     /**
@@ -19,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param view is the actual view (activity_main)
      */
-    public void startActivity(final View view) {
+    private void startActivity(final View view) {
         String viewTag = (String) view.getTag();
 
         String categoryAlbums = getString(R.string.category_albums);
@@ -45,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param view is the actual view (activity_main)
      */
-    public void addSongs(final View view) {
+    private void addSongs(final View view) {
         Intent addSongsIntent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         addSongsIntent.setType("audio/*");
         addSongsIntent.addCategory(Intent.CATEGORY_OPENABLE);

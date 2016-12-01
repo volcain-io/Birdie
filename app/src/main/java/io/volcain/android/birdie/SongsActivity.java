@@ -135,9 +135,9 @@ public class SongsActivity extends AppCompatActivity {
     }
 
     /**
-     * This method will be used if an implicit intent was started from following activities (categories):
-     * {@link AlbumsActivity}, {@link ArtistsActivity}, {@link GenreActivity}
-     * It will display the songs according to one of selected categories.
+     * This method will be used if an implicit intent was started from following activities
+     * (categories): {@link AlbumsActivity}, {@link ArtistsActivity}, {@link GenreActivity} It will
+     * display the songs according to one of selected categories.
      *
      * @param categoryItem can be an album, a genre, an artist
      */

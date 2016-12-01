@@ -15,7 +15,7 @@
     <string name="activity_main_desc">If you open the app these four categories and the \"Add Song\" text view will be shown. If you click on the \"Add Song\" text a new explicit intent will be started which has access to your filesystem to choose music files from. If you tap on one of these categories a new activity opens to choose songs accordingly. </string>
 
     <!-- Playback activity description [CHAR LIMIT=255] -->
-    <string name="activity_songs_desc">In this view you can playback your music files and listen to them. To do so you have to click on the playback icon, which changes to the pause icon while music is played. If you click on the pause icon music player is paused and the playback icon is displayed instead.</string>
+    <string name="activity_songs_desc">In this view you can playback your music files and listen to them. To do so you have to click on the playback icon, which changes to the pause icon while music is played. If you click on the pause icon music player is paused and the playback icon is displayed instead. This song list changes according from which category the user came from, e.g. Artists -> Agnes Obel -> only songs of this artist will be shown.</string>
 
     <!-- Artist activity description [CHAR LIMIT=255] -->
     <string name="activity_artist_desc">In this view you can choose one of the artists to play songs of. Click on one of the artists to open a new activity which shows all the tracks of the selected artist. In this new activity you have than the ability to play each song.</string>

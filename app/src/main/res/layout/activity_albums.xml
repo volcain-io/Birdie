@@ -18,14 +18,12 @@
                 android:id="@+id/album_1"
                 style="@style/CategoryStyle"
                 android:tag="@string/album_1"
-                android:onClick="startActivity"
                 android:text="@string/album_1" />
 
             <TextView
                 android:id="@+id/album_2"
                 style="@style/CategoryStyle"
                 android:tag="@string/album_2"
-                android:onClick="startActivity"
                 android:text="@string/album_2" />
         </LinearLayout>
 
@@ -38,14 +36,12 @@
                 android:id="@+id/album_3"
                 style="@style/CategoryStyle"
                 android:tag="@string/album_3"
-                android:onClick="startActivity"
                 android:text="@string/album_3" />
 
             <TextView
                 android:id="@+id/album_4"
                 style="@style/CategoryStyle"
                 android:tag="@string/album_4"
-                android:onClick="startActivity"
                 android:text="@string/album_4" />
         </LinearLayout>
 
