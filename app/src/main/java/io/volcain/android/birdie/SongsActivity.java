@@ -187,13 +187,4 @@ public class SongsActivity extends AppCompatActivity {
         Log.v(logTag, "pause playing song...");
         // TODO: logic to be implemented
     }
-
-    /**
-     * Sets the image resource of the given view to play icon (ic_play_circle_outline_black_48dp).
-     *
-     * @param imageView is the image view of which we change the image resource
-     */
-    private void resetImageResource(final ImageView imageView) {
-        imageView.setImageResource(R.drawable.ic_play_circle_outline_black_48dp);
-    }
 }
