@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/activity_tags"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.volcain.android.birdie.MainActivity">
+    tools:context="io.volcain.android.birdie.GenreActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,18 +15,18 @@
             style="@style/LinearLayoutHorizontalStyle">
 
             <TextView
-                android:id="@+id/artists"
+                android:id="@+id/genre_1"
                 style="@style/CategoryStyle"
                 android:onClick="startActivity"
-                android:tag="@string/category_artists"
-                android:text="@string/category_artists" />
+                android:tag="@string/genre_1"
+                android:text="@string/genre_1" />
 
             <TextView
-                android:id="@+id/tags"
+                android:id="@+id/genre_2"
                 style="@style/CategoryStyle"
                 android:onClick="startActivity"
-                android:tag="@string/category_genre"
-                android:text="@string/category_genre" />
+                android:tag="@string/genre_2"
+                android:text="@string/genre_2" />
         </LinearLayout>
 
         <LinearLayout
@@ -35,32 +35,29 @@
             android:layout_below="@id/category_1">
 
             <TextView
-                android:id="@+id/albums"
+                android:id="@+id/genre_3"
                 style="@style/CategoryStyle"
                 android:onClick="startActivity"
-                android:tag="@string/category_albums"
-                android:text="@string/category_albums" />
+                android:tag="@string/genre_3"
+                android:text="@string/genre_3" />
 
             <TextView
-                android:id="@+id/songs"
+                android:id="@+id/genre_4"
                 style="@style/CategoryStyle"
                 android:onClick="startActivity"
-                android:tag="@string/category_songs"
-                android:text="@string/category_songs" />
+                android:tag="@string/genre_4"
+                android:text="@string/genre_4" />
         </LinearLayout>
 
         <LinearLayout
-            style="@style/LinearLayoutVerticalStyle"
+            style="@style/LinearLayoutHorizontalStyle"
             android:layout_below="@id/category_2">
 
             <TextView
-                style="@style/CategoryStyle"
-                android:onClick="addSongs"
-                android:text="@string/add_songs" />
-
-            <TextView
                 style="@style/TextDescriptionStyle"
-                android:text="@string/activity_main_desc" />
+                android:text="@string/activity_album_desc" />
         </LinearLayout>
     </RelativeLayout>
+
 </ScrollView>
+

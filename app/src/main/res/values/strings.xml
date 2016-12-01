@@ -1,3 +1,84 @@
 <resources>
+    <!-- Title for the application. [CHAR LIMIT=12] -->
     <string name="app_name">Birdie</string>
+
+    <!-- Add Songs Button [CHAR LIMIT=20] -->
+    <string name="add_songs">Add Songs</string>
+
+    <!-- Music Control Image View Content Description [CHAR LIMIT=30] -->
+    <string name="music_control_icon">Music Control Icon</string>
+
+    <!-- Album Image View Content Description [CHAR LIMIT=30] -->
+    <string name="album_image">Album Image</string>
+
+    <!-- Main activity description [CHAR LIMIT=255] -->
+    <string name="activity_main_desc">If you open the app these four categories and the \"Add Song\" text view will be shown. If you click on the \"Add Song\" text a new explicit intent will be started which has access to your filesystem to choose music files from. If you tap on one of these categories a new activity opens to choose songs accordingly. </string>
+
+    <!-- Playback activity description [CHAR LIMIT=255] -->
+    <string name="activity_songs_desc">In this view you can playback your music files and listen to them. To do so you have to click on the playback icon, which changes to the pause icon while music is played. If you click on the pause icon music player is paused and the playback icon is displayed instead.</string>
+
+    <!-- Artist activity description [CHAR LIMIT=255] -->
+    <string name="activity_artist_desc">In this view you can choose one of the artists to play songs of. Click on one of the artists to open a new activity which shows all the tracks of the selected artist. In this new activity you have than the ability to play each song.</string>
+
+    <!-- Album activity description [CHAR LIMIT=255] -->
+    <string name="activity_album_desc">In this view you can choose one of the albums to play songs of. Click on one of the albums to open a new activity which shows all the tracks of the selected album. In this new activity you have than the ability to play each song.</string>
+
+    <!-- Genre activity description [CHAR LIMIT=255] -->
+    <string name="activity_genre_desc">In this view you can choose one of the genres to play songs of. Click on one of the genres to open a new activity which shows all the tracks of the selected genre. In this new activity you have than the ability to play each song.</string>
+
+    <!-- Category name for albums [CHAR LIMIT=20] -->
+    <string name="category_albums">Albums</string>
+
+    <!-- Category name for the songs [CHAR LIMIT=20] -->
+    <string name="category_songs">Songs</string>
+
+    <!-- Category name for the artists [CHAR LIMIT=20] -->
+    <string name="category_artists">Artists</string>
+
+    <!-- Category name for the genre [CHAR LIMIT=20] -->
+    <string name="category_genre">Genre</string>
+
+    <!-- Song name [CHAR LIMIT=20] -->
+    <string name="song_1">Scars To Your Beautiful</string>
+    <!-- Time for song 1 [CHAR LIMIT=5] -->
+    <string name="time_1">3:50</string>
+    <!-- Artist name for song 1 [CHAR LIMIT=20] -->
+    <string name="artist_1">Alessia Cara</string>
+    <!-- Album of song 1 artist [CHAR LIMIT=50] -->
+    <string name="album_1">Know-It-All (Deluxe)</string>
+    <!-- Genre of song 1 artist [CHAR LIMIT=20] -->
+    <string name="genre_1">Pop</string>
+
+    <!-- Song name [CHAR LIMIT=20] -->
+    <string name="song_2">Riverside</string>
+    <!-- Time for song 2 [CHAR LIMIT=5] -->
+    <string name="time_2">3:48</string>
+    <!-- Artist name for song 2 [CHAR LIMIT=20] -->
+    <string name="artist_2">Agnes Obel</string>
+    <!-- Album of song 3 artist [CHAR LIMIT=50] -->
+    <string name="album_2">Philharmonics (Deluxe Edition)</string>
+    <!-- Genre of song 2 artist [CHAR LIMIT=20] -->
+    <string name="genre_2">Folk / Classical</string>
+
+    <!-- Song name [CHAR LIMIT=20] -->
+    <string name="song_3">Starboy</string>
+    <!-- Time for song 3 [CHAR LIMIT=5] -->
+    <string name="time_3">3:50</string>
+    <!-- Artist name for song 3 [CHAR LIMIT=20] -->
+    <string name="artist_3">The Weeknd</string>
+    <!-- Album of song 3 artist [CHAR LIMIT=50] -->
+    <string name="album_3">Starboy</string>
+    <!-- Genre of song 3 artist [CHAR LIMIT=20] -->
+    <string name="genre_3">Hip-Hop</string>
+
+    <!-- Song name [CHAR LIMIT=20] -->
+    <string name="song_4">Cool Girl</string>
+    <!-- Artist name for song 4 [CHAR LIMIT=20] -->
+    <string name="artist_4">Tove Lo</string>
+    <!-- Time for song 4 [CHAR LIMIT=5] -->
+    <string name="time_4">3:19</string>
+    <!-- Album of song 4 artist [CHAR LIMIT=50] -->
+    <string name="album_4">Lady Wood</string>
+    <!-- Genre of song 4 artist [CHAR LIMIT=20] -->
+    <string name="genre_4">Dance</string>
 </resources>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.volcain.android.birdie.SongsActivity">
+
+    <LinearLayout
+        android:id="@+id/category_1"
+        style="@style/LinearLayoutVerticalStyle">
+
+        <LinearLayout style="@style/LinearLayoutHorizontalStyle">
+
+            <ImageView
+                android:id="@+id/play_song_1"
+                style="@style/MusicControlStyle"
+                android:contentDescription="@string/music_control_icon" />
+
+            <ImageView
+                style="@style/SongImageStyle"
+                android:contentDescription="@string/album_image"
+                android:src="@drawable/alessia_cara_scars_to_your_beautiful" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp">
+
+                <TextView
+                    android:id="@+id/song_1"
+                    style="@style/SongTitleStyle"
+                    android:text="@string/song_1" />
+
+                <TextView
+                    android:id="@+id/artists_1"
+                    style="@style/SongArtistStyle"
+                    android:layout_below="@id/song_1"
+                    android:text="@string/artist_1" />
+
+                <TextView
+                    android:id="@+id/time_1"
+                    style="@style/SongTimeStyle"
+                    android:layout_below="@id/song_1"
+                    android:layout_toEndOf="@id/artists_1"
+                    android:layout_toRightOf="@id/artists_1"
+                    android:text="@string/time_1" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayoutHorizontalStyle">
+
+            <ImageView
+                android:id="@+id/play_song_2"
+                style="@style/MusicControlStyle"
+                android:contentDescription="@string/music_control_icon" />
+
+            <ImageView
+                style="@style/SongImageStyle"
+                android:contentDescription="@string/album_image"
+                android:src="@drawable/agnes_obel_riverside" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/category_list_item_height"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/song_2"
+                    style="@style/SongTitleStyle"
+                    android:text="@string/song_2" />
+
+                <TextView
+                    android:id="@+id/artists_2"
+                    style="@style/SongArtistStyle"
+                    android:layout_below="@id/song_2"
+                    android:text="@string/artist_2" />
+
+                <TextView
+                    android:id="@+id/time_2"
+                    style="@style/SongTimeStyle"
+                    android:layout_below="@id/song_2"
+                    android:layout_toEndOf="@id/artists_2"
+                    android:layout_toRightOf="@id/artists_2"
+                    android:text="@string/time_2" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayoutHorizontalStyle">
+
+            <ImageView
+                android:id="@+id/play_song_3"
+                style="@style/MusicControlStyle"
+                android:contentDescription="@string/music_control_icon" />
+
+            <ImageView
+                style="@style/SongImageStyle"
+                android:contentDescription="@string/album_image"
+                android:src="@drawable/the_weeknd_starboy" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/category_list_item_height"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/song_3"
+                    style="@style/SongTitleStyle"
+                    android:text="@string/song_3" />
+
+                <TextView
+                    android:id="@+id/artists_3"
+                    style="@style/SongArtistStyle"
+                    android:layout_below="@id/song_3"
+                    android:text="@string/artist_3" />
+
+                <TextView
+                    android:id="@+id/time_3"
+                    style="@style/SongTimeStyle"
+                    android:layout_below="@id/song_3"
+                    android:layout_toEndOf="@id/artists_3"
+                    android:layout_toRightOf="@id/artists_3"
+                    android:text="@string/time_3" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayoutHorizontalStyle">
+
+            <ImageView
+                android:id="@+id/play_song_4"
+                style="@style/MusicControlStyle"
+                android:contentDescription="@string/music_control_icon" />
+
+            <ImageView
+                style="@style/SongImageStyle"
+                android:contentDescription="@string/album_image"
+                android:src="@drawable/tove_lo_cool_girl" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/category_list_item_height"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/song_4"
+                    style="@style/SongTitleStyle"
+                    android:text="@string/song_4" />
+
+                <TextView
+                    android:id="@+id/artists_4"
+                    style="@style/SongArtistStyle"
+                    android:layout_below="@id/song_4"
+                    android:text="@string/artist_4" />
+
+                <TextView
+                    android:id="@+id/time_4"
+                    style="@style/SongTimeStyle"
+                    android:layout_below="@id/song_4"
+                    android:layout_toEndOf="@id/artists_4"
+                    android:layout_toRightOf="@id/artists_4"
+                    android:text="@string/time_4" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayoutHorizontalStyle">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/activity_songs_desc" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
