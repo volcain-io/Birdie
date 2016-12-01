@@ -11,10 +11,6 @@ import static android.content.Intent.EXTRA_PROCESS_TEXT_READONLY;
 public class SongsActivity extends AppCompatActivity {
     // for logging output
     private final String logTag = SongsActivity.class.getSimpleName();
-    // flag to handle music control
-    private boolean isPlaying = false;
-    // id of the current playing song
-    private int currentSongId = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,26 +87,7 @@ public class SongsActivity extends AppCompatActivity {
      * @param view is the actual view (activity_songs)
      */
     private void playbackControl(final View view) {
-        // for the first playback of a song
-        if (currentSongId == -1) {
-            startPlaying(view.getId());
-        } else {
-            // if the user clicks on the currently playing song we will pause the playback
-            if (currentSongId == view.getId()) {
-                // is already playing?
-                if (isPlaying)
-                    pausePlaying(currentSongId);
-                else
-                    startPlaying(currentSongId);
-            } else {
-                // stop current song
-                stopPlaying(currentSongId);
-                // play selected song
-                startPlaying(view.getId());
-            }
-        }
-        // get id of the current song
-        currentSongId = view.getId();
+        PlaybackControl playbackControl = new PlaybackControl();
     }
 
     /**
@@ -135,56 +112,14 @@ public class SongsActivity extends AppCompatActivity {
     }
 
     /**
-     * This method will be used if an implicit intent was started from following activities
+     * This method will be used if an explicit intent was started from following activities
      * (categories): {@link AlbumsActivity}, {@link ArtistsActivity}, {@link GenreActivity} It will
      * display the songs according to one of selected categories.
      *
      * @param categoryItem can be an album, a genre, an artist
      */
     private void displaySongsByCategoryItem(final String categoryItem) {
-        // TODO: to be implemented
         Log.v(logTag, "displays songs");
-    }
-
-    /**
-     * Start playing a song.
-     *
-     * @param currentSongId is the id of the song which should be played
-     */
-    private void startPlaying(final int currentSongId) {
-        isPlaying = true;
-        // set the image to the pause icon to indicate that the song is currently played
-        ImageView imageView = (ImageView) findViewById(currentSongId);
-        imageView.setImageResource(R.drawable.ic_pause_circle_outline_black_48dp);
-        Log.v(logTag, "start playing song...");
-        // TODO: logic to be implemented
-    }
-
-    /**
-     * Stops playing a song.
-     *
-     * @param currentSongId is the id of the song which should be stopped
-     */
-    private void stopPlaying(final int currentSongId) {
-        isPlaying = false;
-        // set the image to the play icon to indicate that the song is currently paused
-        ImageView imageView = (ImageView) findViewById(currentSongId);
-        imageView.setImageResource(R.drawable.ic_play_circle_outline_black_48dp);
-        Log.v(logTag, "stop playing song...");
-        // TODO: logic to be implemented
-    }
-
-    /**
-     * Pauses the current playing song.
-     *
-     * @param currentSongId is the id of the song which should be paused
-     */
-    private void pausePlaying(final int currentSongId) {
-        isPlaying = false;
-        // set the image to the play icon to indicate that the song is currently paused
-        ImageView imageView = (ImageView) findViewById(currentSongId);
-        imageView.setImageResource(R.drawable.ic_play_circle_outline_black_48dp);
-        Log.v(logTag, "pause playing song...");
-        // TODO: logic to be implemented
+        // TODO: to be implemented
     }
 }

@@ -72,19 +72,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Find the View to add songs to the library
         TextView add_songs = (TextView) findViewById(R.id.add_songs);
-
-        // Set a click listener on that
-        add_songs.setOnClickListener(new View.OnClickListener() {
-            // will be executed when the user clicks on the text view.
-            @Override
-            public void onClick(View view) {
-                addSongs(view);
-            }
-        });
     }
 
     /**
-     * Create an implicit intent to start corresponding activity.
+     * Create an explicit intent to start corresponding activity.
      *
      * @param view is the actual view (activity_main)
      */
@@ -107,18 +98,5 @@ public class MainActivity extends AppCompatActivity {
             categoryIntent = new Intent(this, GenreActivity.class);
         if (categoryIntent != null)
             startActivity(categoryIntent);
-    }
-
-    /**
-     * Add songs to the library.
-     *
-     * @param view is the actual view (activity_main)
-     */
-    private void addSongs(final View view) {
-        Intent addSongsIntent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-        addSongsIntent.setType("audio/*");
-        addSongsIntent.addCategory(Intent.CATEGORY_OPENABLE);
-        // Only the system receives the ACTION_OPEN_DOCUMENT, so no need to test.
-        startActivityForResult(addSongsIntent, REQUEST_AUDIO_OPEN);
     }
 }

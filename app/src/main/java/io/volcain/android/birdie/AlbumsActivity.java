@@ -73,7 +73,7 @@ public class AlbumsActivity extends AppCompatActivity {
     }
 
     /**
-     * Create an implicit intent to start songs activity.
+     * Create an explicit intent to start songs activity.
      *
      * @param view is the actual view (activity_albums)
      */

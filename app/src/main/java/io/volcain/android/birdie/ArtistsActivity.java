@@ -73,11 +73,11 @@ public class ArtistsActivity extends AppCompatActivity {
     }
 
     /**
-     * Create an implicit intent to start songs activity.
+     * Create an explicit intent to start songs activity.
      *
      * @param view is the actual view (activity_artists)
      */
-    public void startSongsActivity(final View view) {
+    private void startSongsActivity(final View view) {
         String artistTag = (String) view.getTag();
 
         Intent categoryIntent = new Intent(this, SongsActivity.class);
