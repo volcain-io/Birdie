@@ -9,24 +9,32 @@ import android.widget.ImageView;
 import static android.content.Intent.EXTRA_PROCESS_TEXT_READONLY;
 
 public class SongsActivity extends AppCompatActivity {
+    // for logging output
     private final String logTag = SongsActivity.class.getSimpleName();
+    // flag to handle music control
     private boolean isPlaying = false;
+    // id of the current playing song
     private int currentSongId = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_songs);
-        // receive extra from intent
-        String selectedCategoryItem = processIntentExtra(savedInstanceState);
 
+        // receive extra from intent
+        String selectedCategoryItem = getIntentExtra(savedInstanceState);
+        // if intent was started from within in another category, so display the song according to that category
         if (selectedCategoryItem != null)
             displaySongsByCategoryItem(selectedCategoryItem);
 
-        initClickListeners();
+        // create click listeners
+        createClickListeners();
     }
 
-    private void initClickListeners() {
+    /**
+     * method creates click listeners for each music control icon (play/pause)
+     */
+    private void createClickListeners() {
         // Find the View that shows the play icon for the first song
         ImageView song_1 = (ImageView) findViewById(R.id.play_song_1);
 
@@ -110,7 +118,7 @@ public class SongsActivity extends AppCompatActivity {
      *
      * @return a string containing the value of the extra data.
      */
-    private String processIntentExtra(final Bundle savedInstanceState) {
+    private String getIntentExtra(final Bundle savedInstanceState) {
         // receive extra from intent
         String selectedCategoryItem;
         if (savedInstanceState == null) {
@@ -127,7 +135,9 @@ public class SongsActivity extends AppCompatActivity {
     }
 
     /**
-     * Display songs according to the category item.
+     * This method will be used if an implicit intent was started from following activities (categories):
+     * {@link AlbumsActivity}, {@link ArtistsActivity}, {@link GenreActivity}
+     * It will display the songs according to one of selected categories.
      *
      * @param categoryItem can be an album, a genre, an artist
      */
@@ -146,7 +156,7 @@ public class SongsActivity extends AppCompatActivity {
         // set the image to the pause icon to indicate that the song is currently played
         ImageView imageView = (ImageView) findViewById(currentSongId);
         imageView.setImageResource(R.drawable.ic_pause_circle_outline_black_48dp);
-        Log.v(logTag, "playing song: " + getString(currentSongId));
+        Log.v(logTag, "start playing song...");
         // TODO: logic to be implemented
     }
 
@@ -160,7 +170,7 @@ public class SongsActivity extends AppCompatActivity {
         // set the image to the play icon to indicate that the song is currently paused
         ImageView imageView = (ImageView) findViewById(currentSongId);
         imageView.setImageResource(R.drawable.ic_play_circle_outline_black_48dp);
-        Log.v(logTag, "stopped song: " + getString(currentSongId));
+        Log.v(logTag, "stop playing song...");
         // TODO: logic to be implemented
     }
 
@@ -174,7 +184,7 @@ public class SongsActivity extends AppCompatActivity {
         // set the image to the play icon to indicate that the song is currently paused
         ImageView imageView = (ImageView) findViewById(currentSongId);
         imageView.setImageResource(R.drawable.ic_play_circle_outline_black_48dp);
-        Log.v(logTag, "paused song: " + getString(currentSongId));
+        Log.v(logTag, "pause playing song...");
         // TODO: logic to be implemented
     }
 
